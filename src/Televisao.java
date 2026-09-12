@@ -36,7 +36,13 @@ public class Televisao {
     }
 
     public void setCanal(int canal) {
-        this.canal = canal;
+        if(canal >= 0 && canal <= 500){
+            this.canal = canal;
+            System.out.println("Canal: " + getCanal());
+        } else{
+            System.out.println("[Error]");
+        }
+
     }
 
     public void setVolume(int volume) {
@@ -45,5 +51,14 @@ public class Televisao {
 
     public void setLigado(boolean ligado) {
         this.ligado = ligado;
+    }
+
+    public void ligar(){
+        this.ligado = !this.ligado;
+        if(ligado){
+            System.out.println(">>> Tv Ligada!");
+        }else{
+            System.out.println(">>> Tv Desligada!");
+        }
     }
 }
