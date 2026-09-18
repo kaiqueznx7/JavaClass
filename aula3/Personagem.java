@@ -9,6 +9,7 @@ public class Personagem {
     private String nome;
     private int nivel;
     private int vida;
+    private int idade;
 
     //construtores
     //Construtor padrão (default)
